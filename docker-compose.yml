@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  devserver:
+    build: .
+    container_name: react-playground
+    volumes:
+      - .:/home/node/projects
+      - ./.docker/zsh/powerlevel10k/.p10k.zsh:/home/node/.p10k.zsh:delegated
+      - ./.docker/zsh/history:/home/node/zsh:delegated
+    ports: 
+      - 3000:3000
+      - 8080:8080
