@@ -58,7 +58,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
     slug,
     title: response.data.title,
     content: prismicHelper.asHTML(response.data.content),
-    updatedAt: new Date(response.last_publication_date).toLocaleDateString('pt-BR', {
+    updated_at: new Date(response.last_publication_date).toLocaleDateString('pt-BR', {
       day: '2-digit',
       month: 'long',
       year: 'numeric',

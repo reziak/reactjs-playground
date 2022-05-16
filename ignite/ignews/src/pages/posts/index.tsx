@@ -1,6 +1,5 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
-import * as prismicHelper from '@prismicio/helpers';
 import { createClient } from "../../services/prismic";
 
 import styles from './styles.module.scss';
@@ -54,7 +53,7 @@ export const getStaticProps: GetStaticProps = async () => {
       slug: post.uid,
       title: post.data.title,
       excerpt: post.data.content.find(content => content.type === 'paragraph')?.text ?? '',
-      updatedAt: new Date(post.last_publication_date).toLocaleDateString('pt-BR', {
+      updated_at: new Date(post.last_publication_date).toLocaleDateString('pt-BR', {
         day: '2-digit',
         month: 'long',
         year: 'numeric',
