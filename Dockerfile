@@ -1,4 +1,4 @@
-FROM node:14.17.0-slim
+FROM node:14.18.0-slim
 
 RUN mkdir -p /usr/share/man/man1 && \
     echo 'deb http://ftp.debian.org/debian stretch-backports main' | tee /etc/apt/sources.list.d/stretch-backports.list && \
@@ -12,6 +12,7 @@ RUN mkdir -p /usr/share/man/man1 && \
     fonts-powerline
 
 RUN npm install -g create-react-app
+RUN npm install -g firebase-tools
 
 ENV JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 
