@@ -33,7 +33,11 @@ export const Home = () => {
     const room = await get(child(roomRef, `rooms/${roomCode}`));
 
     if (!room.exists()) {
-      return console.log('Room does not exists');
+      return alert('Room does not exists');
+    }
+
+    if (room.val().endedAt) {
+      return alert('Room no longer available');
     }
 
     navigate(`/rooms/${roomCode}`);

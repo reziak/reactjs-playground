@@ -6,6 +6,7 @@ import { Home } from "./pages/Home";
 import { NewRoom } from "./pages/NewRoom";
 import { Room } from './pages/Room';
 import { NotFound } from './pages/404';
+import { AdminRoom } from './pages/AdminRoom';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="new" element={<NewRoom />} />
             <Route path=":id" element={<Room />} />
           </Route>
+          <Route path="/admin/room/:id" element={<AdminRoom />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AuthContextProvider>
