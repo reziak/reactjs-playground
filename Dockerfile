@@ -11,6 +11,7 @@ RUN mkdir -p /usr/share/man/man1 && \
     wget \
     fonts-powerline
 
+RUN npm install -g npm
 RUN npm install -g create-react-app
 RUN npm install -g firebase-tools
 

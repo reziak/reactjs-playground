@@ -62,6 +62,10 @@
   line-height: 1.6;
 }
 
+.post .tags a + a {
+  margin-left: 0.5rem;
+}
+
 .post .commentForm {
   width: 100%;
   margin-top: 1.5rem;
@@ -99,8 +103,13 @@
   transition: background 0.2s;
 }
 
-.post .commentForm button[type=submit]:hover {
+.post .commentForm button[type=submit]:not(:disabled):hover {
   background: var(--green-300);
+}
+
+.post .commentForm button[type=submit]:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 .commentList {
