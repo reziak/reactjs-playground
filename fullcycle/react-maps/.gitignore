@@ -25,3 +25,6 @@ dist-ssr
 
 
 .env*
+
+secrets.ts
+_secrets.ts
